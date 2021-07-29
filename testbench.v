@@ -5,11 +5,11 @@ module testbench();
   reg clk_p;
   reg reset;
   reg start;
-  reg [4:0] out;
+  wire [4:0] out;
   wire ready;
   wire correct;
 
-  main(reset, start, clk_p, out, ready);
+  main UUT (reset, start, clk_p, out, ready);
 
   initial
   begin

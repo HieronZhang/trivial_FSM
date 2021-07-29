@@ -4,8 +4,8 @@ module main (
     input reset,
     input start,
     input clk,
-    output reg [4:0] out,
-    output reg ready
+    output [4:0] out,
+    output ready
 );
     parameter state_one = 0;
     parameter state_two = 1;
@@ -48,7 +48,7 @@ module main (
             default : begin
                 next_state = state_one;
             end
-        end
+        endcase
 
     end
 
